@@ -180,25 +180,25 @@ export default function App() {
                     </div>
                   </div>
 
-                  <div className="pt-2">
+                    <div className="pt-2">
                     <Button
                       type="submit"
                       disabled={submitting}
                       className="w-full bg-black text-black border-0 disabled:bg-gray-400 disabled:cursor-not-allowed"
                     >
                       {submitting ? (
-                        <>
-                          <Loader2 className="animate-spin mr-2" size={16} />
-                          Creating...
-                        </>
+                      <>
+                        <Loader2 className="animate-spin mr-2" size={16} />
+                        Creating...
+                      </>
                       ) : (
-                        <>
-                          <Plus className="mr-2 text" size={16} />
-                          Create Event
-                        </>
+                      <>
+                        <Plus className="mr-2 text" size={16} />
+                        Create Event
+                      </>
                       )}
                     </Button>
-                  </div>
+                    </div>
                 </form>
 
                 <div className="mt-4 p-3 bg-gray-50 rounded border text-sm text-gray-600">
