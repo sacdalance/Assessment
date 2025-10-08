@@ -106,7 +106,7 @@ export default function App() {
       <div className="max-w-6xl mx-auto p-6">
         {/* Header */}
         <div className="border-b border-gray-200 pb-6 mb-8">
-          <h1 className="text-3xl font-light text-black">Events Manager</h1>
+          <h1 className="text-3xl font-light text-black">Simple Events App</h1>
           <p className="text-gray-600 mt-2">Create and manage location-based events</p>
         </div>
 
@@ -121,7 +121,7 @@ export default function App() {
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Title *
+                      Title <span className="text-red-500">*</span>
                     </label>
                     <Input
                       name="title"
@@ -129,7 +129,7 @@ export default function App() {
                       onChange={handleChange}
                       placeholder="Event title"
                       required
-                      className="border-gray-300 focus:border-black focus:ring-1 focus:ring-black"
+                      className="border-gray-300 focus:border-black focus:ring-0 focus:ring-offset-0 focus:outline-none"
                     />
                   </div>
 
@@ -143,14 +143,14 @@ export default function App() {
                       onChange={handleChange}
                       placeholder="Event description"
                       rows={3}
-                      className="border-gray-300 focus:border-black focus:ring-1 focus:ring-black resize-none"
+                      className="border-gray-300 focus:border-black focus:ring-0 focus:ring-offset-0 focus:outline-none resize-none"
                     />
                   </div>
 
                   <div className="grid grid-cols-2 gap-3">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">
-                        Latitude *
+                        Latitude <span className="text-red-500">*</span>
                       </label>
                       <Input
                         name="lat"
@@ -160,12 +160,12 @@ export default function App() {
                         type="number"
                         step="any"
                         required
-                        className="border-gray-300 focus:border-black focus:ring-1 focus:ring-black"
+                        className="border-gray-300 focus:border-black focus:ring-0 focus:ring-offset-0 focus:outline-none"
                       />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">
-                        Longitude *
+                        Longitude <span className="text-red-500">*</span>
                       </label>
                       <Input
                         name="lng"
@@ -175,7 +175,7 @@ export default function App() {
                         type="number"
                         step="any"
                         required
-                        className="border-gray-300 focus:border-black focus:ring-1 focus:ring-black"
+                        className="border-gray-300 focus:border-black focus:ring-0 focus:ring-offset-0 focus:outline-none"
                       />
                     </div>
                   </div>
@@ -184,7 +184,7 @@ export default function App() {
                     <Button
                       type="submit"
                       disabled={submitting}
-                      className="w-full bg-black hover:bg-gray-800 text-white border-0"
+                      className="w-full bg-black text-black border-0 disabled:bg-gray-400 disabled:cursor-not-allowed"
                     >
                       {submitting ? (
                         <>
@@ -193,7 +193,7 @@ export default function App() {
                         </>
                       ) : (
                         <>
-                          <Plus className="mr-2" size={16} />
+                          <Plus className="mr-2 text" size={16} />
                           Create Event
                         </>
                       )}
