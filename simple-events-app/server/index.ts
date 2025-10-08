@@ -15,7 +15,7 @@ const client = new Client({
   user: process.env.PGUSER || 'postgres',
   host: process.env.PGHOST || 'localhost',
   database: process.env.PGDATABASE || 'events_db',
-  password: process.env.PGPASSWORD || 'your_password',
+  password: process.env.PGPASSWORD || '0905',
   port: parseInt(process.env.PGPORT || '5432'),
 });
 

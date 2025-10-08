@@ -7,7 +7,7 @@ import os
 # Database configuration
 DB_CONFIG = {
     'user': os.getenv('PGUSER', 'postgres'),
-    'password': os.getenv('PGPASSWORD', 'your_password'),
+    'password': os.getenv('PGPASSWORD', '0905'),
     'host': os.getenv('PGHOST', 'localhost'),
     'port': os.getenv('PGPORT', '5432')
 }
